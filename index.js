@@ -21,18 +21,20 @@ function handleRequest(req, res) {
       .pipe(res);
     return;
   }
-  if (request.method === 'OPTIONS') {
+  if (req.method === 'OPTIONS') {
     var headers = {};
     headers['Access-Control-Allow-Origin'] = 'https://ecmascript.run';
     headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS';
     headers['Access-Control-Allow-Credentials'] = false;
     headers['Access-Control-Max-Age'] = '86400'; // 24 hours
     headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept';
-    response.writeHead(200, headers);
-    response.end();
+    res.writeHead(200, headers);
+    res.end();
     return;
   }
-  res.status(404).send('Not found: ' + req.method + ' ' + req.url);
+  res.writeHead(404, { 'Content-Type': 'text/plain' });
+  res.write('Not Found: ' + req.method + ' ' + req.url);
+  res.end();
 }
 
 http.createServer(handleRequest).listen(port);
