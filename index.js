@@ -21,13 +21,13 @@ function handleRequest(req, res) {
       client_id: client_id,
       client_secret: client_secret,
       code: query.code,
-      redirect_uri: 'https://ecmascript.run/',
+      redirect_uri: 'https://gist.run/',
       state: query.state
     };
     request.post('https://github.com/login/oauth/access_token')
       .form(args)
-      .on('response', function(res) {
-        addCorsHeaders(res.headers);
+      .on('response', function(githubResponse) {
+        addCorsHeaders(githubResponse.headers);
       })
       .pipe(res);
     return;
