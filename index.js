@@ -3,8 +3,8 @@ var url = require('url');
 var request = require('request');
 
 var port = process.env.PORT || 5000;
-var client_id = process.env.ES_RUN_CLIENTID || 'abcdef';
-var client_secret = process.env.ES_RUN_SECRET || 'ghyjklmnopqrstuvwxyz';
+var client_id = process.env.GIST_RUN_CLIENTID || 'abcdef';
+var client_secret = process.env.GIST_RUN_SECRET || 'ghyjklmnopqrstuvwxyz';
 
 function addCorsHeaders(headers) {
   headers['Access-Control-Allow-Origin'] = 'https://ecmascript.run';
