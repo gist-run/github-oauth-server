@@ -7,7 +7,7 @@ var client_id = process.env.GIST_RUN_CLIENTID || 'abcdef';
 var client_secret = process.env.GIST_RUN_SECRET || 'ghyjklmnopqrstuvwxyz';
 
 function addCorsHeaders(headers) {
-  headers['Access-Control-Allow-Origin'] = 'https://ecmascript.run';
+  headers['Access-Control-Allow-Origin'] = 'https://gist.run';
   headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS';
   headers['Access-Control-Allow-Credentials'] = false;
   headers['Access-Control-Max-Age'] = '86400'; // 24 hours
