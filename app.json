@@ -1,8 +1,8 @@
 {
-  "name": "es-run-server",
-  "description": "GitHub auth server for ecmascript.run",
-  "repository": "https://github.com/jdanyow/es-run-server",
-  "logo": "http://ecmascript.run/logo.svg",
+  "name": "github-oauth-server",
+  "description": "GitHub OAuth server for GistRun",
+  "repository": "https://github.com/gist-run/github-oauth-server",
+  "logo": "https://gist.run/img/logo.png",
   "keywords": ["node"],
   "image": "heroku/nodejs"
 }

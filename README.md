@@ -1,6 +1,6 @@
 # es-run-server
 
-GitHub auth server for ecmascript.run
+GitHub auth server for GistRun
 
 ## Running Locally
 
